@@ -2,7 +2,7 @@ name: "telegram weather bot"
 
 on:
     schedule: 
-        - cron: '05 20 * * *' 
+        - cron: '12 20 * * *' 
     
 jobs:
     bot:
