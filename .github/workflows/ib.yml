@@ -1,0 +1,24 @@
+name: "IB telegram weather bot"
+
+on:
+    schedule: 
+        - cron: '*/60 * * * *' 
+    
+jobs:
+    bot:
+        runs-on: ubuntu-latest
+        steps:
+
+        - uses: actions/checkout@v1
+        - name: setup node
+          uses: actions/setup-node@v1
+        - name: install npm  dependencies
+          run: npm ci
+        - name: run code
+          run: node index.js
+          env:
+            WEATHER_API_TOKEN: ${{ secrets.WEATHER_API_TOKEN}}
+            TELEGRAM_TOKEN: ${{ secrets.IB_TELEGRAM_TOKEN}}
+            TELEGRAM_CHAT_ID: ${{ secrets.IB_TELEGRAM_CHAT_ID}}
+
+
