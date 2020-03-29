@@ -1,4 +1,4 @@
-name: "telegram weather bot"
+name: "Akshay telegram weather bot"
 
 on:
     schedule: 
