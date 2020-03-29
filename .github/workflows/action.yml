@@ -2,7 +2,7 @@ name: "telegram weather bot"
 
 on:
     schedule: 
-        - cron: '12 20 * * *' 
+        - cron: '*/5 * * * *' 
     
 jobs:
     bot:
@@ -13,7 +13,7 @@ jobs:
         - name: setup node
           uses: actions/setup-node@v1
         - name: install npm  dependencies
-          run: npm install 
+          run: npm ci
         - name: run code
           run: node index.js
           env:
