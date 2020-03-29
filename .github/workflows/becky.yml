@@ -2,7 +2,7 @@ name: "Becky telegram weather bot"
 
 on:
     schedule: 
-        - cron: '*/5 * * * *' 
+        - cron: '0 06 * * *' 
     
 jobs:
     bot:
