@@ -2,7 +2,7 @@ name: "Akshay telegram weather bot"
 
 on:
     schedule: 
-        - cron: '*/5 * * * *' 
+        - cron: '*/60 * * * *' 
     
 jobs:
     bot:
